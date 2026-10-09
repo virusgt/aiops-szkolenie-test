@@ -1,0 +1,22 @@
+
+name: AIOps - Test środowiska
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sprawdzenie środowiska
+        run: |
+          echo "AIOps - GitHub Actions działa!"
+          echo "System:"
+          uname -a
+          echo "Git:"
+          git --version
+          echo "Docker:"
+          docker --version
+          echo "TEST ZAKOŃCZONY POMYŚLNIE"
